@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Learn CSS</title>
+    <style>
+        h1 {
+            color: brown;
+        }
+
+        /* h1 {
+            color: brown !important;
+        } */
+
+        .someClass {
+            color: orange;
+        }
+
+        #someNewId {
+            color: aqua;
+        }
+
+
+        p {
+            color: red;
+        }
+
+        p.ex1 {
+            display: none;
+            width: 100px;
+        }
+
+        p.ex2 {
+            display: block;
+            width: 100px;
+        }
+
+        p.ex3 {
+            display: inline;
+            width: 100px;
+        }
+
+        p.ex4 {
+            display: inline-block;
+            width: 100px;
+            z-index: 10;
+        }
+
+        p.ex5 {
+            visibility: hidden;
+            width: 100px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            float: left;
+        }
+
+        a {
+            display: block;
+            padding: 8px;
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="flex.html">Flex</a></li>
+        <li><a href="css.html">CSS</a></li>
+    </ul>
+    <br><br>
+
+    <h1 style="color: blue;" class="someClass" id="someNewId">Inline CSS</h1>
+    <h1 class="someClass" id="someNewId">ID CSS</h1>
+    <h1 class="someClass">Class CSS</h1>
+    <h1>Included CSS</h1>
+    <p>Ordering: Left to Right, Top to Bottom</p>
+
+    <div style="padding-left: 5%;">
+        <div>
+            None: This is some random text please don't pay attention. <p class="ex1">Prashant!</p> Looks like you did
+            :P.
+        </div>
+        <div>
+            Block: This is some random text please don't pay attention. <p class="ex2">Prashant!</p> Looks like you did
+            :P.
+        </div>
+        <div>
+            Inline: This is some random text please don't pay attention. <p class="ex3">Prashant!</p> Looks like you did
+            :P.
+        </div>
+        <div>
+            Inline-block: This is some random text please don't pay attention. <p class="ex4">Prashant!</p> Looks like
+            you did :P.
+        </div>
+        <div>
+            Visibility: This is some random text please don't pay attention. <p class="ex5">Prashant!</p> Looks like you
+            did :P.
+        </div>
+    </div>
+
+    <div>
+        <!--https://www.w3schools.com/cssref/playit.asp?filename=playcss_position-->
+    </div>
+</body>
+
+</html>
