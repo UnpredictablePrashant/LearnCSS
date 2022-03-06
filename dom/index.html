@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample HTML</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Change the color combination of web page (themes) -->
+        <div name="web">
+            <h1>Sample HTML</h1>
+            <p id="firstpara">Creating a simple webpage to learn about DOM and advanced css is awesome.</p>
+            <button onclick="changeColor('red')">Red</button>
+            <button onclick="changeColor('pink')">Pink</button>
+        </div>
+        <div>
+            <p class="best">Change Background Color</p>
+            <button onclick="changeBackgroundColor('black')">Black</button>
+            <button onclick="changeBackgroundColor('yellow')">Yellow</button>
+        </div><br>
+
+        <!-- Count the number of element with name 'web' and class name 'best' created above-->
+        <div>
+            <button onclick="counter();classCounter();">Calls</button>
+        </div><br>
+
+
+        <div style="text-align: justify; padding-left: 10%;">
+            Programming Languages I know
+            <ul id="programList">
+                <li><a href="https://python.org">Python</a></li>
+                <li>C++</li>
+            </ul>
+            <button onclick="programmingLang();">Add Lang</button>
+        </div><br>
+        <div style="text-align: justify; padding-left: 10%;">
+            <input type="text" id="enterName" value="Shane"/>
+            <input type="button" onclick="getMyName();" value="Show Name">
+            <h4>Hi, I am <b id="name"></b></h4>
+            <p id="aboutme">I worked as security analyst in Google, BMW and currently I am co-founder of deeptech startup called AtharvaAI.</p>
+            <button onclick="changeVal();">Boring!</button>
+            <button onclick="removeVal();">Remove!</button>
+            
+        </div>
+        <div>
+            <p><a href="herovired.com" id="Link">HeroVired</a></p>
+            <button onclick="attrLink()">List all Links</button> <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes-->
+            
+        </div>
+        <script src="domaccess.js"></script>
+    </body>
+</html>
