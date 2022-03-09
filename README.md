@@ -24,7 +24,11 @@ This project is to learn CSS. This also will include concept from javascript.
 ![CSS 01](/assets/project-css01.gif "Project CSS-01")
 
 <br>
+
 ### Project - CSS02
+
 <p>The project is to create expanding cards. The concept is used in various places like gallery, etc.</p><br>
+
 ![CSS 02](/assets/project-css02.gif "Project CSS-02")
+
 <br>
