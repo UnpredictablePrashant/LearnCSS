@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html,body {
+            /* background-color: white; */
+            height: 100vh;
+        }
+        body{
+            margin:0;
+        }
+
+        .counter {
+            text-align: center;
+            font-size: 100px;
+            width: 100%;
+            height: 100vh;
+            position:relative;
+            animation-name: changer;
+            animation-duration: 5s;
+            animation-iteration-count: 1;            
+        }
+        @keyframes changer {
+            0% {background-color: aqua;}
+            25% {background-color: aquamarine;}
+            50% {background-color: yellow;}   
+            75% {background-color: greenyellow;} 
+            100% {background-color: black;}        
+        }
+    </style>
+</head>
+
+<body>
+    <div id="con"> </div>
+    <div style="text-align: center;">
+        <button onclick="counter();" id="butStartStop">Start</button>
+    </div>
+    
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        async function counter() {
+            document.getElementById("butStartStop").remove();
+            if (document.getElementById("co")){
+                document.getElementById("co").remove();
+            }
+            var tag = document.createElement("div");
+            tag.setAttribute("class", "counter");
+            tag.setAttribute("id","co");
+            var text = document.createTextNode("1");
+            tag.appendChild(text);
+            var ele = document.getElementById("con");
+            ele.appendChild(tag);
+            for (let i = 1; i < 6; i++) {
+                document.getElementById('co').innerHTML = i;
+                await sleep(1000);
+            }
+            document.getElementById('co').innerHTML = "Go";
+            
+        }
+
+    </script>
+</body>
+
+</html>
