@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <style>
+        .segment {
+            width: 0px;
+            height: 25px;
+            background-color: lime;
+            float: left;
+        }
+
+        #body {
+            width: 60px;
+            height: 25px;
+            border: solid grey 5px;
+            float: left;
+        }
+
+        #head {
+            width: 5px;
+            height: 15px;
+            margin-top: 10px;
+            background-color: grey;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="body">
+        <div class="segment"></div>
+        <div class="segment"></div>
+        <div class="segment"></div>
+    </div>
+    <div id="head"></div>
+    <script>
+        let animation = anime({
+            targets: '.segment',
+            width: 20,
+            duration: 300,
+            easing: 'linear',
+            delay: function (el, i, l) {
+                return i * 500;
+            },
+            endDelay: 500,
+            loop: true
+        });   
+    </script>
+</body>
+
+</html>

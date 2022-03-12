@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <script>
+        let animation = anime({
+            targets: 'div',
+            // Properties 
+            translateX: 100,
+            borderRadius: 50,
+            // Property Parameters
+            duration: 2000,
+            easing: 'linear',
+            // Animation Parameters
+            direction: 'alternate'
+        });  
+    </script>
+</body>
+
+</html>
