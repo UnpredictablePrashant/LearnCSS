@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <button id="Btn">Click Me</button>
+    <button onclick="firstFunction(); secondFunction();">Click</button>
+
+
+    <script>
+        // Defining custom functions
+        function firstFunction() {
+            alert("first function executed ");
+        }
+
+        function secondFunction() {
+            alert(" second function executed ");
+        }
+
+        // Selecting button element
+        var btn = document.getElementById("Btn");
+
+        // Assigning event handlers to the button
+        // btn.onclick = firstFunction;
+        // btn.onclick = secondFunction;
+        btn.addEventListener("click", firstFunction);
+        btn.addEventListener("click", secondFunction);
+
+    </script>
+    
+
+
+
+
+</body>
+
+</html>

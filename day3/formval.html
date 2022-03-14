@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body onload='document.frm.tx.focus()'>
+    <div>
+        <h2>Input an email and Submit</h2>
+        <form name="frm" action="#">
+            <input type="email" placeholder="email@mgail.com"/>
+            <input type='text' name='tx' />
+            <input type="submit" name="sub" value="Submit" onclick="validateEmail(document.frm.tx)" />
+            <!-- <input type="email" placeholder="name@xyz.com"> -->
+        </form>
+    </div>
+    <script>
+        function validateEmail(inputText) {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            // For regex reference refer to https://www.w3schools.com/jsref/jsref_obj_regexp.asp
+            if (inputText.value.match(mailformat)) {
+                alert("Valid email address!");
+                document.form1.text1.focus();
+                return true;
+            } else {
+                alert("You have entered an invalid email address!");
+                document.form1.text1.focus();
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

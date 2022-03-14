@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <button id="Btn">Click Me</button>
+    <button id="myBtn">Click Me</button>
+    <p id="demo">Wonderful Text</p>
+
+    <script>
+        // Defining custom functions
+        function firstFunction() {
+            alert("first function executed ");
+        }
+
+        function secondFunction() {
+            alert(" second function executed ");
+        }
+
+        // Selecting button element
+        var btn = document.getElementById("Btn");
+
+        // Assigning event handlers to the button
+        // btn.onclick = firstFunction;
+        // btn.onclick = secondFunction; // This one overwrite the first
+
+
+        //With addEventListener both the function gets executed one after another.
+        btn.addEventListener("click", firstFunction);
+        btn.addEventListener("click", secondFunction);
+
+    </script>
+
+    <script>
+        // Selecting button element
+        var btn = document.getElementById("myBtn");
+
+        // Defining custom functions
+        function sayHello() {
+            alert("Hi, how are you doing?");
+        }
+
+        function setHoverColor() {
+            btn.style.background = "yellow";
+        }
+
+        function setNormalColor() {
+            btn.style.background = "";
+        }
+
+        // Assigning event listeners to the button
+        btn.addEventListener("click", sayHello);
+        btn.addEventListener("mouseover", setHoverColor);
+        btn.addEventListener("mouseout", setNormalColor);
+    </script>
+   
+    <script>
+        window.addEventListener("resize", function () {
+            document.getElementById("demo").innerHTML = "Resize detected";
+        });
+    </script>
+
+</body>
+
+</html>
